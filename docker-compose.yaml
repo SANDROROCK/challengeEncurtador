@@ -1,23 +1,50 @@
-version: "3.8"
-services:
-    api:
-        build:
-            dockerfile: Dockerfile
-            context: .
-        depends_on: 
-            - postgres
-        environment: 
-            DATABASE_URL: postgres://user:password@postgres:5432/db
-            NODE_ENV: development
-            PORT: 3000
-        ports:
-            - "8080:8081"
+version: "3.5" ## especifica a versão do docker-compose file
 
+services: ## Define um serviço
+  main:
+    container_name: main
+    build:
+      context: .
+      target: development
+    ports:
+      - 8081:8081
+    links:
+      - db
+    command: npm run start:dev 
+    env_file:
+      - .env
+  postgres:
+    container_name: postgres_container
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123456789
+      POSTGRES_DB: challengeEncurtador
+    
+    ports:
+      - "15432:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+  
+  pgadmin:
+    container_name: pgadmin_container
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+    volumes:
+       - pgadmin:/root/.pgadmin
+    ports:
+      - "${PGADMIN_PORT:-5050}:80"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+networks:
+  postgres:
+    driver: bridge
+
+volumes:
     postgres:
-        image: postgres:10.4
-        ports:
-            - "35000:5432"
-        environment: 
-            POSTGRES_USER: user
-            POSTGRES_PASSWORD: password
-            POSTGRES_DB: db
+    pgadmin:

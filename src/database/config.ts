@@ -4,7 +4,7 @@ module.exports = {
        host: 'localhost',
        port: 5432,
        username: 'postgres',
-       password: '137956',
+       password: '123456789',
        database: 'challengeEncurtador',
     },
     test: {
