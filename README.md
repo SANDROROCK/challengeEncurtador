@@ -12,7 +12,7 @@ Api criada com framewwok [Nest](https://github.com/nestjs/nest) para encurtar ur
 $ npm install
 ```
 
-## Running the app
+## Iniciando a Api local sem Docker
 
 ```bash
 # development
@@ -24,6 +24,17 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+
+## Iniciando sua api no Docker
+
+```bash
+
+$ docker-compose up --build
+
+```
+
+A API estará ouvindo suas solicitações em http://localhost:8081
+
 
 ## Test
 
@@ -61,4 +72,3 @@ Caso seja feita uma requisção get na nova url devolvida pela api o o navegador
 Documentação
 
 http://localhost:8081/api/
-```
