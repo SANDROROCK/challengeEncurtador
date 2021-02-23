@@ -48,10 +48,10 @@ $ yarn add
 # criar o banco 
 $ npx sequelize-cli db:create
 
-# criar o tabelas no banco 
+# criar tabelas no banco 
 $ npx sequelize-cli db:migrrate
 
-# iniciar a aplicação em development
+# iniciar a aplicação em desenvolvimento
 $ yarn start:dev
 
 # iniciar a aplicação em produção
