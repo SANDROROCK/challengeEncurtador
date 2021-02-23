@@ -1,11 +1,11 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
+  <a href="http://nestjs.com/" target="blank"><img src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fmedia-exp1.licdn.com%2Fdms%2Fimage%2FC560BAQFQGgnrpUs9EQ%2Fcompany-logo_200_200%2F0%2F1560537752201%3Fe%3D2159024400%26v%3Dbeta%26t%3DTOHzAqCobFUKZBoaI7lfvIsYlCP51NtEJBiwzq6KEJI&imgrefurl=https%3A%2F%2Fbr.linkedin.com%2Fcompany%2Fwiser-educa%25C3%25A7%25C3%25A3o&tbnid=iy0TLea10gmtvM&vet=12ahUKEwjW9-PWn4DvAhWgBLkGHRnjCpYQMygAegUIARChAQ..i&docid=JaT1v-xSbN1RlM&w=200&h=200&q=wiser%20educa%C3%A7%C3%A3o&ved=2ahUKEwjW9-PWn4DvAhWgBLkGHRnjCpYQMygAegUIARChAQ width="320" alt="Logo" /></a>
 </p>
 
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+  <p align="center">Desafio Técnico e Criativo proposto pela Wiser Educação</p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
@@ -24,7 +24,7 @@
 
 ## Description
 
-Api criada com framwerok [Nest](https://github.com/nestjs/nest) para encurtar urls
+Api criada com framewwok [Nest](https://github.com/nestjs/nest) para encurtar urls
 
 ## Installation
 
@@ -61,7 +61,7 @@ $ npm run test:cov
 ## Funcionamento
 
 
-ao Realizar uma requisição Post  com o corpo da requisição contendo as seguinte informação :
+Realizar uma requisição POST em http://127.0.0.1:8081 com o corpo da requisição contendo as seguinte informação :
 
 ```bash
 {
@@ -69,4 +69,11 @@ ao Realizar uma requisição Post  com o corpo da requisição contendo as segui
 }
 ```
 
+Deverá ser devolvido uma nova url encurtada.
 
+```bash
+{
+  newUrl:'http://localhost:ty254s'
+}
+
+Caso seja feita uma requisção get na nova url devolvida pela api o o navegador deverá direcionar para url anteriomente encurtada
