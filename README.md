@@ -77,3 +77,8 @@ Deverá ser devolvido uma nova url encurtada.
 }
 
 Caso seja feita uma requisção get na nova url devolvida pela api o o navegador deverá direcionar para url anteriomente encurtada
+
+
+Documentação 
+
+http://localhost:8081/api/
