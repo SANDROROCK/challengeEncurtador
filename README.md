@@ -41,7 +41,6 @@ A API estará ouvindo suas solicitações em http://localhost:8081
 Renomear .env.example para .env e incluir use e password de conexão com o postgres
 
 
-
 ```bash
 # instalar dependencias
 $ yarn add
