@@ -74,7 +74,7 @@ Deverá ser devolvido uma nova url encurtada.
 {
   newUrl:'http://localhost:ty254s'
 }
-
+```
 Caso seja feita uma requisção get na nova url devolvida pela api o o navegador deverá direcionar para url anteriomente encurtada
 
 
