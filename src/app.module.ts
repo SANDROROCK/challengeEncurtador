@@ -6,15 +6,17 @@ import { EncurtadorController } from './encurtador/encurtador.controller';
 import { EncurtadorService } from './encurtador/provider/encurtador.service';
 import { encurtadorProviders } from './encurtador/provider/encurtador.providers';
 import { EncurtadorLinks } from './encurtador/model/encurtadorLinks.model';
+import * as dotenv from "dotenv";
 
-@Module({
+dotenv.config();
+ @Module({
   imports: [
     SequelizeModule.forRoot({
       dialect: 'postgres',
       host: 'localhost',
       port: 5432,
-      username: 'postgres',
-      password: '123456789',
+      username: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
       database: 'challengeEncurtador',
       models: [EncurtadorLinks],
     })

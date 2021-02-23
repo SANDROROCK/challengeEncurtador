@@ -36,17 +36,27 @@ $ docker-compose up --build
 A API estará ouvindo suas solicitações em http://localhost:8081
 
 
-## Test
+## Instalação
+
+Renomear .env.example para .env e incluir use e password de conexão com o postgres
+
+
 
 ```bash
-# unit tests
-$ npm run test
+# instalar dependencias
+$ yarn add
 
-# e2e tests
-$ npm run test:e2e
+# criar o banco 
+$ npx sequelize-cli db:create
 
-# test coverage
-$ npm run test:cov
+# criar o tabelas no banco 
+$ npx sequelize-cli db:migrrate
+
+# iniciar a aplicação em development
+$ yarn start:dev
+
+# iniciar a aplicação em produção
+$ yarn start:prod
 ```
 
 ## Funcionamento
